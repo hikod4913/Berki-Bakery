@@ -492,7 +492,7 @@ a{
     color: #fff;
     background-color: rgba(0,0,0,.3);
     right: 0;
-    bottom: 0;
+    bottom: 50px;
     border-radius: 50%;
 }
 @media screen and (min-width: 767px){
