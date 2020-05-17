@@ -1,0 +1,502 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.berkiStart {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* mobile layout start */
+#navBar-control{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+.bgi-fixed{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg-color{
+    background-color: rgba(0,0,0,.3);
+}
+.header .container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(248, 174, 174);
+    position: relative;
+}
+.header .logo{
+    padding: 5px;
+}
+.header .logo a{
+    width: 80px;
+    height: 59px;
+    background-image: url("pic/berki\ logo.png");
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+.header .navBar-menu{
+    width: 50px;
+    height: 50px;
+    display: block;
+    border: 1px solid #fff;
+    position: relative;
+    font-size: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.header .navBar-menu:before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    border-bottom: 5px solid #fff;
+    top: 22px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 15px 0 #fff,
+                0 -15px 0 #fff;
+    transition: .3s;
+}
+.header .navBar-menu:after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    border-top: none;
+    top: 22px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: .3s;
+}
+.header .navBar{
+    position: absolute;
+    top: 69px;
+    left: -100%;
+    width: 100%;
+    background-color: rgb(248, 174, 174);
+    transition: .3s;
+    z-index: 99;
+}
+.header .navBar li{
+    font-size: 0;
+}
+.header .navBar a{
+    font-size: 20px;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    transition: .3s;
+}
+.header .navBar li:first-child a{
+    border-top: 1px solid #fff;
+}
+.header .navBar a:hover{
+    color: #5B00AE;
+    
+}
+#navBar-control:checked ~ .navBar{
+    left: 0;
+    z-index: 99;
+}
+#navBar-control:checked ~ .navBar-menu:before{
+    box-shadow: none;
+    transform: rotate(-45deg);
+}
+#navBar-control:checked ~ .navBar-menu:after{
+    border-top: 5px solid #fff;
+    transform: rotate(45deg);
+}
+/* header mobile end */
+
+/* header tablet start */
+@media screen and (min-width: 767px){
+    .header .navBar a{
+        font-size: 30px;
+        font-weight: 900;
+        padding: 25px 0;
+    }
+}
+/* header tablet end */
+
+/* header pc start */
+@media screen and (min-width: 1023px){
+    .header .navBar-menu{
+        display: none;
+    }
+    .header .navBar{
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .header .navBar a{
+        font-size: 18px;
+        padding: 25px 15px;
+        border-bottom: none;
+        position: relative;
+    }
+    .header .navBar a:after{
+        content: "";
+        position: absolute;
+        border-top: 5px solid #fff;
+        left: 50%;
+        right: 50%;
+        bottom: 5px;
+        margin: auto;
+        transition: .3s;
+    }
+    .header .navBar a:hover:after{
+        left: 0;
+        right: 0;
+    }
+    .header .navBar li:first-child a{
+        border-top: none;
+    }
+    
+}
+/* header pc end */
+
+
+.mainContainer{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto 20px;
+}
+
+
+/* banner mobile start */
+.banner{
+    background-image: url("pic/berki\ banner.png");
+    padding: 25% 50%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.banner h2{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 25%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+}
+@media screen and (min-width: 319px){
+    .banner h2{
+        font-size: 22px;
+    }
+} 
+/* banner mobile end */
+
+/* banner tablet start */
+@media screen and (min-width: 767px){
+    .banner h2{
+        font-size: 40px;
+    }
+}
+/* banner tablet end */
+
+/* banner pc start */
+@media screen and (min-width: 1023px){
+    .banner h2{
+        font-size: 50px;
+        background-color: rgba(248, 174, 174,.3);
+    }
+}
+/* banner pc end */
+
+
+/* about mobile start*/
+.aboutBerki{
+    text-align: center;
+    background-image: url("pic/about.png");
+    color: #fff;
+}
+.aboutBerki h2{
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 20px 0 10px;
+}
+.aboutBerki p{
+    padding: 10px 20px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+@media screen and sminen and (max-width: 319px){
+    .aboutBerki h2{
+        font-size: 18px;
+    }
+}
+/* about mobile end */
+
+/* about tablet start */
+@media screen and (min-width: 767px){
+    .aboutBerki h2{
+        font-size: 30px;
+        padding: 50px 0 10px;
+    }
+    .aboutBerki p{
+        font-size: 20px;
+        padding: 15px 100px 50px;
+    }
+}
+/* about tablet end */
+
+/* about pc start */
+@media screen and (min-width: 1023px){
+    .aboutBerki h2{
+        font-size: 35px;
+        line-height: 1.5;
+        padding: 50px 0 10px;
+    }
+    .aboutBerki p{
+        font-size: 25px;
+        padding: 15px 25% 50px;
+    }
+}
+/* about pc end */
+
+
+/* product mobile start */
+.todaySpecial h2,
+.products h2{
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 20px 0;
+}
+.todaySpecial h2 span{
+    font-size: 20px;
+}
+.todaySpecial .todaySpecial-list{
+    background-image: url("pic/toast.png");
+    padding: 30px 0;
+}
+.todaySpecial .todaySpecial-list li,
+.products ul li{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #aaa;
+    padding: 10px;
+}
+.todaySpecial .todaySpecial-list li:last-child,
+.products ul li:last-child{
+    margin-bottom: 0;
+}
+.todaySpecial .todaySpecial-list li h3,
+.products h3{
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 10px 0;
+    color: #fff;
+}
+.todaySpecial .todaySpecial-list li p,
+.products p{
+    color: #fff;
+    line-height: 1.2;
+    padding: 0 10px 10px;
+}
+.products .cupCake{
+    background-image: url("pic/bread-2.png");
+    padding: 30px 0;
+}
+.products .cheeseCake{
+    background-image: url("pic/bread-1.png");
+    padding: 30px 0;
+}
+.products .othersProducts{
+    background-image: url("pic/bread-3.png");
+    padding: 30px 0;
+}
+/* product mobile end */
+
+/* product tablet start */
+@media screen and (min-width: 767px){
+    .todaySpecial h2,
+    .products h2{
+        font-size: 30px;
+        padding-top: 50px;
+    }
+    .todaySpecial h2 span{
+        font-size: 25px;
+    }
+    .todaySpecial .todaySpecial-list,
+    .products ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .todaySpecial .todaySpecial-list li,
+    .products ul li{
+        width: 45%;
+        margin: 0;
+    }
+    .todaySpecial .todaySpecial-list li:last-child,
+    .products ul li:last-child,
+    .products .cheeseCake li:nth-child(3),
+    .products .cheeseCake li:nth-child(4){
+        margin-top: 30px;
+    }
+    .products .productList-3 .othersProducts li:last-child{
+        margin-top: 0;
+    }
+}
+/* product tablet end */
+
+/* product pc start */
+@media screen and (min-width: 1023px){
+    .todaySpecial h2,
+    .products h2{
+        font-size: 30px;
+        padding-top: 50px;
+    }
+    .todaySpecial h2 span{
+        font-size: 25px;
+    }
+    .todaySpecial .todaySpecial-list,
+    .products ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .todaySpecial .todaySpecial-list li,
+    .products ul li{
+        width: 30%;
+        margin: 0;
+    }
+    .products .cheeseCake{
+        flex-wrap: wrap;
+    }
+    .todaySpecial .todaySpecial-list li:last-child,
+    .products ul li:last-child,
+    .products .cheeseCake li:nth-child(3){
+        margin-top: 0;
+    }
+    .products .cheeseCake li:nth-child(4),
+    .products .cheeseCake li:last-child{
+        margin-top: 30px;
+    }
+    
+}
+/* product pc end */
+
+
+/* footer mobile start */
+.footer{
+    background-color: rgb(248, 174, 174);
+}
+.footer h3{
+    text-align: center;
+    padding: 20px 0;
+}
+/* footer mobile end */
+
+/* footer tablet start */
+@media screen and (min-width: 767px){
+    .footer{
+        font-size: 24px;
+        color: #fff;
+    }
+}
+/* footer tablet end */
+
+.backTop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,.3);
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+}
+@media screen and (min-width: 767px){
+    .backTop{
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 30px;
+    }
+}
