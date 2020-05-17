@@ -40,19 +40,19 @@
                         <label class="navBar-menu" for="navBar-control">選單</label>
                     <ul class="navBar">
                         <li>
-                            <a href="#about">關於我們</a>
+                            <a class="close" href="#about">關於我們</a>
                         </li>
                         <li>
-                            <a href="#special">主廚特餐</a>
+                            <a class="close" href="#special">主廚特餐</a>
                         </li>
                         <li>
-                            <a href="#cup">杯子蛋糕系列</a>
+                            <a class="close" href="#cup">杯子蛋糕系列</a>
                         </li>
                         <li>
-                            <a href="#cheese">乳酪系列</a>
+                            <a class="close" href="#cheese">乳酪系列</a>
                         </li>
                         <li>
-                            <a href="#others">其他系列</a>
+                            <a class="close" href="#others">其他系列</a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BerkiBakery/?tn-str=k*F"><i class="fab fa-facebook-square"> 前往粉絲頁訂購</i></a>
@@ -223,5 +223,16 @@
 
         </div>
     
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function (){
+                $(".close").click(function(){
+                    $(":checkbox").click()
+                })
+            })
+        </script>
+
 </body>
 </html>
