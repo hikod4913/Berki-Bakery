@@ -83,6 +83,9 @@ a{
 .bg-color{
     background-color: rgba(0,0,0,.3);
 }
+.header{
+    background-color: rgb(248, 174, 174);
+}
 .header .container{
     width: 100%;
     max-width: 1440px;
@@ -90,7 +93,6 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(248, 174, 174);
     position: relative;
 }
 .header .logo{
@@ -177,6 +179,7 @@ a{
     border-top: 5px solid #fff;
     transform: rotate(45deg);
 }
+
 /* header mobile end */
 
 /* header tablet start */
